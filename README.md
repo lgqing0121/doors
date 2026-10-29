@@ -11,7 +11,7 @@ The build uses Node.js built-in modules only. It defaults to `https://doors-game
 
 ## Cloudflare Pages
 
-The GitHub Actions workflow builds every push to `main`. To enable automatic deployment, create a Cloudflare Pages project named `doors-field-guide`, add the repository secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`, and set the repository variable `CLOUDFLARE_CONFIGURED` to `true`. Set `SITE_URL` to the final public hostname, including `https://`. The Pages action deploys the `dist/` directory.
+The GitHub Actions workflow builds and deploys every push to `main` as the `doors` Cloudflare Worker. It serves the generated `dist/` directory and binds the `doors-game.wiki` custom domain. Add a Cloudflare API token with Workers deployment permission as the repository secret `CLOUDFLARE_API_TOKEN`.
 
 ## Google Search Console
 

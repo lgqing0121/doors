@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "doors",
+  "compatibility_date": "2026-10-29",
+  "workers_dev": true,
+  "routes": [
+    { "pattern": "doors-game.wiki", "custom_domain": true }
+  ],
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}
+

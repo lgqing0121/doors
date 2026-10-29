@@ -29,7 +29,6 @@ jobs:
 
   deploy:
     needs: build
-    if: ${{ vars.CLOUDFLARE_CONFIGURED == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -41,10 +40,10 @@ jobs:
         env:
           SITE_URL: ${{ vars.SITE_URL || 'https://doors-game.wiki' }}
           GOOGLE_SITE_VERIFICATION: ${{ vars.GOOGLE_SITE_VERIFICATION }}
-      - name: Deploy to Cloudflare Pages
+      - name: Deploy doors Worker and static assets
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=doors-field-guide --branch=main
+          accountId: 32b1eadad8073e3e311f0090c55f8b2c
+          command: deploy --config wrangler.jsonc
 
