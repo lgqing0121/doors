@@ -19,7 +19,7 @@ jobs:
       - name: Build static site
         run: npm run build
         env:
-          SITE_URL: ${{ vars.SITE_URL || 'https://doors-field-guide.pages.dev' }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://doors-game.wiki' }}
           GOOGLE_SITE_VERIFICATION: ${{ vars.GOOGLE_SITE_VERIFICATION }}
       - name: Upload static artifact
         uses: actions/upload-artifact@v4
@@ -39,7 +39,7 @@ jobs:
       - name: Build production site
         run: npm run build
         env:
-          SITE_URL: ${{ vars.SITE_URL || 'https://doors-field-guide.pages.dev' }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://doors-game.wiki' }}
           GOOGLE_SITE_VERIFICATION: ${{ vars.GOOGLE_SITE_VERIFICATION }}
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
@@ -47,3 +47,4 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy dist --project-name=doors-field-guide --branch=main
+

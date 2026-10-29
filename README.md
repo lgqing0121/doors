@@ -7,7 +7,7 @@ An independent, multilingual fan guide for the Roblox experience DOORS. Built as
 - `npm run build` generates the site in `dist/`.
 - `npm run preview` serves the generated site at `http://127.0.0.1:4173`.
 
-The build uses Node.js built-in modules only. It defaults to `https://doors-field-guide.pages.dev`; set `SITE_URL` to the final public HTTPS hostname before a production build so canonical links and the sitemap match the deployed site.
+The build uses Node.js built-in modules only. It defaults to `https://doors-game.wiki`; set `SITE_URL` to another public HTTPS hostname only if the deployment uses a different domain.
 
 ## Cloudflare Pages
 
