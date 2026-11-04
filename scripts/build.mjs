@@ -58,7 +58,6 @@ function shell(locale, slug, content) {
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header"><div class="header-inner"><a class="brand" href="${href(locale)}" aria-label="DOORS Field Guide home"><span class="brand-mark" aria-hidden="true"><span></span></span><span>DOORS<span class="brand-sub">FIELD GUIDE</span></span></a><nav class="primary-nav" aria-label="Primary navigation">${navigation}</nav><div class="header-actions">${localePicker(locale, slug)}<a class="header-play" href="${external.roblox}" target="_blank" rel="noreferrer">${e(locale.play)} <span aria-hidden="true">↗</span></a><button class="menu-toggle" aria-expanded="false" aria-label="Open navigation"><span></span><span></span></button></div></div></header>
   <main id="main">
-  <aside class="ad-slot ad-top-banner" data-ad-slot="top-banner" aria-label="Advertisement"><span class="ad-label">Advertisement</span></aside>
   ${content}
   <aside class="ad-slot ad-rail-left" data-ad-slot="rail-left" aria-label="Advertisement"><span class="ad-label">Advertisement</span></aside>
   <aside class="ad-slot ad-rail-right" data-ad-slot="rail-right" aria-label="Advertisement"><span class="ad-label">Advertisement</span></aside>

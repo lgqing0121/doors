@@ -153,12 +153,9 @@ button, select { font: inherit; }
 .ad-slot .ad-label { position: absolute; top: 5px; left: 7px; z-index: 1; color: #716b60; font: 7px var(--mono); letter-spacing: .08em; }
 .ad-slot iframe { max-width: 100%; border: 0; }
 
-/* Top banner (728x90 desktop) */
-.ad-top-banner { width: 728px; min-height: 90px; margin: 0 auto; padding: 12px 0 0; }
-
 /* Home compact ad band */
 .home-ad-band { display: flex; max-width: 1060px; align-items: flex-start; justify-content: center; margin: 0 auto; padding: 16px 30px 4px; }
-.ad-compact { width: 320px; min-height: 50px; }
+.ad-compact { width: 300px; min-height: 250px; }
 
 /* Native ad */
 .native-ad { position: relative; max-width: 1060px; margin: 32px auto; padding: 0 30px; }
